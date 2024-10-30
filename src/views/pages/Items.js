@@ -5,8 +5,11 @@ export class Items extends Component {
     return [
       {
         name: "lol",
-        img: "",
         char_id: 1,
+      },
+      {
+        name: "lol",
+        char_id: 2,
       },
     ];
   };
@@ -31,7 +34,7 @@ export class Items extends Component {
       .join("\n");
     return /*html*/ `
       <section class="container-md">
-        <h1 class="text-center">List of characters:</h1>
+        <h1 class="text-center">List of items:</h1>
         <div class="row m-4">
           ${itemList}
         </div>

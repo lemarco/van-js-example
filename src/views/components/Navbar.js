@@ -11,7 +11,7 @@ export class Navbar extends Component {
     const navLinks = this.links
       .map(
         (link) =>
-          /*html*/ `<li class="m-2"><a class="nav-link" href="/#/${link.path}">${link.name}</a></li>`
+          /*html*/ `<li class="m-2"><a class="nav-link" href="/#${link.path}">${link.name}</a></li>`
       )
       .join("\n");
     return `

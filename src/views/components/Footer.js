@@ -1,7 +1,7 @@
 import { Component } from "../../utils/component";
 export class Footer extends Component {
   render = async () => {
-    return /*html*/ `
+    return `
       <p class="text-center mt-4"><em>Single Page App built with Vanilla JavaScript.</em></p>  
       <p id='event-handler-p'></p>
       <p class="text-center "><em id="time"></em></p>  

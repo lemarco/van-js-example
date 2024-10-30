@@ -7,6 +7,7 @@ import { Error404 } from "./views/pages/Error404.js";
 import { Navbar } from "./views/components/Navbar.js";
 import { Footer } from "./views/components/Footer.js";
 import { parseRequestUrl } from "./services/utils.js";
+import { TablePage } from "./views/pages/Table.js";
 import "./index.css";
 
 const routes = {
@@ -15,6 +16,7 @@ const routes = {
   "/items": Items,
   "/items/:id": ItemShow,
   "/register": Register,
+  "/table": TablePage,
 };
 
 const router = async () => {

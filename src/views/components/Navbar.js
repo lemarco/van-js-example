@@ -1,22 +1,23 @@
 import { Component } from "../../utils/component";
 export class Navbar extends Component {
-  links = ["About", "Register", "Secret"];
+  links = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Register", path: "/register" },
+    { name: "Table", path: "/table" },
+    { name: "Secret", path: "/secret" },
+  ];
   render = async () => {
     const navLinks = this.links
       .map(
         (link) =>
-          /*html*/ `<li class="nav-item"><a class="nav-link" href="/#/${link.toLowerCase()}">${link}</a></li>`
+          /*html*/ `<li class="m-2"><a class="nav-link" href="/#/${link.path}">${link.name}</a></li>`
       )
       .join("\n");
-    return /*html*/ `
+    return `
       <nav class="navbar navbar-expand-md navbar-light bg-white">
-        <a class="navbar-brand" href="/#">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Breaking_Bad_logo.svg" width="70" height="70" alt="Breaking Bad">
-        </a>
-        <ul class="navbar-nav">
-          ${navLinks}
-        </ul>
+        <ul class="flex">${navLinks}</ul>
       </nav>
-    `;
+  `;
   };
 }

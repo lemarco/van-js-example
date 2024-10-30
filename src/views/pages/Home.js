@@ -2,7 +2,7 @@ import { Component } from "../../utils/component";
 
 export class Home extends Component {
   render = async () => {
-    return /*html*/ `
+    return `
       <section>
         <h1 class="text-bold text-red-300 ml-10" ><a href="/#/items">Check items</a></h1>
       </section>

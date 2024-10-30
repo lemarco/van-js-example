@@ -13,7 +13,7 @@ export class ItemShow extends Component {
   render = async () => {
     const params = parseRequestUrl();
     const { name } = await getItem(params.id);
-    return /*html*/ `
+    return `
       <section class="container-md" style="width: 20rem;">
         <div class="card">
           <div class="card-body">

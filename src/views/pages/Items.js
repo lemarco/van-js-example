@@ -32,7 +32,7 @@ export class Items extends Component {
       `
       )
       .join("\n");
-    return /*html*/ `
+    return `
       <section class="container-md">
         <h1 class="text-center">List of items:</h1>
         <div class="row m-4">

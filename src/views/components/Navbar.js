@@ -1,8 +1,8 @@
-const Navbar = {
-  render: async () => {
-    const links = ["About", "Register", "Secret"];
-
-    const navLinks = links
+import { Component } from "../../utils/component";
+export class Navbar extends Component {
+  links = ["About", "Register", "Secret"];
+  render = async () => {
+    const navLinks = this.links
       .map(
         (link) =>
           /*html*/ `<li class="nav-item"><a class="nav-link" href="/#/${link.toLowerCase()}">${link}</a></li>`
@@ -18,9 +18,5 @@ const Navbar = {
         </ul>
       </nav>
     `;
-  },
-
-  after_render: async () => {},
-};
-
-export default Navbar;
+  };
+}

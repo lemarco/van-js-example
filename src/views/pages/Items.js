@@ -1,16 +1,18 @@
-const getItems = async () => {
-  return [
-    {
-      name: "lol",
-      img: "",
-      char_id: 1,
-    },
-  ];
-};
+import { Component } from "../../utils/component";
 
-const Items = {
-  render: async () => {
-    const items = await getItems();
+export class Items extends Component {
+  getItems = async () => {
+    return [
+      {
+        name: "lol",
+        img: "",
+        char_id: 1,
+      },
+    ];
+  };
+
+  render = async () => {
+    const items = await this.getItems();
     const itemList = items
       .map(
         ({ name, img, char_id }) => /*html*/ `
@@ -35,9 +37,5 @@ const Items = {
         </div>
       </section>  
     `;
-  },
-
-  after_render: async () => {},
-};
-
-export default Items;
+  };
+}

@@ -1,13 +1,14 @@
-const Footer = {
-  render: async () => {
+import { Component } from "../../utils/component";
+export class Footer extends Component {
+  render = async () => {
     return /*html*/ `
       <p class="text-center mt-4"><em>Single Page App built with Vanilla JavaScript.</em></p>  
       <p id='event-handler-p'></p>
       <p class="text-center "><em id="time"></em></p>  
     `;
-  },
+  };
 
-  after_render: async () => {
+  after_render = async () => {
     const time = document.querySelector("#time");
     const p = document.querySelector("#event-handler-p");
     window.addEventListener("lol-1-event", (e) => {
@@ -24,7 +25,5 @@ const Footer = {
 
     updateTime();
     setInterval(updateTime, 1000);
-  },
-};
-
-export default Footer;
+  };
+}

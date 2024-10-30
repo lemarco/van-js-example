@@ -1,15 +1,16 @@
 import { parseRequestUrl } from "../../services/utils.js";
+import { Component } from "../../utils/component";
 
-const getItem = async (id) => {
-  return {
-    name: "lol",
-    img: "",
-    char_id: id,
+export class ItemShow extends Component {
+  getItem = async (id) => {
+    return {
+      name: "lol",
+      img: "",
+      char_id: id,
+    };
   };
-};
 
-const ItemShow = {
-  render: async () => {
+  render = async () => {
     // Get current URL params.
     const params = parseRequestUrl();
     // Get destructured data from API based on id provided.
@@ -30,13 +31,11 @@ const ItemShow = {
         </div>
       </section>
     `;
-  },
+  };
 
-  after_render: async () => {
+  after_render = async () => {
     document
       .querySelector("#characterImage")
       .addEventListener("click", () => alert("You have clicked on the photo!"));
-  },
-};
-
-export default ItemShow;
+  };
+}
